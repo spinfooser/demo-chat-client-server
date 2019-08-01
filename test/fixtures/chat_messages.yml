@@ -1,0 +1,5 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+basic_test:
+  message: Hello! How are you today?
+  from: The Friendly Barber
