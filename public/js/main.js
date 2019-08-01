@@ -3,9 +3,9 @@ import { MessageView } from './messageView.js'
 function main() {
   let messagesView = document.getElementById('messages-view')
   let globalView = new MessageView(messagesView)
-  globalView.updateView()
   
   inputWiring(globalView)
+  setInterval(() => {globalView.updateView()}, 1000)
 }
 
 function inputWiring(view) {

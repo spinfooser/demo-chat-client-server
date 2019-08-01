@@ -24,6 +24,7 @@ export class MessageView {
 
   async updateView() {
     let messages = await getChatMessages()
+    this.removeAllMessages()
   
     messages.forEach((message) => {
       this.addMessageToView(message.from, message.message)
@@ -32,5 +33,11 @@ export class MessageView {
 
   addMessageToView(from, message) {
     this.view.insertAdjacentHTML('beforeend', `<div><span>${from}: </span><span>${message}</div>`)
+  }
+
+  removeAllMessages() {
+    while (this.view.firstChild) {
+      this.view.removeChild(this.view.firstChild);
+    }
   }
 }
