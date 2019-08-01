@@ -26,4 +26,15 @@ class ChatMessageControllerTest < ActionDispatch::IntegrationTest
     id = @response.parsed_body["id"]
     assert_equal "This is only a test", ChatMessage.find(id).message
   end
+
+  test "responds to get" do
+    get "/chat-message"
+    assert_response :success
+  end
+
+  test "retrieves messages" do
+    get "/chat-message"
+    assert_response :success
+    assert_equal 3, @response.parsed_body.length
+  end
 end
