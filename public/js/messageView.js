@@ -5,10 +5,16 @@ export class MessageView {
     this.view = view
   }
 
-  async sendMessage(message) {
+  async sendMessage(user, message) {
+    let username = 'Test Account 8'
+
+    if(user.length > 0) {
+      username = user
+    }
+
     let payload = {
       chat_message: {
-        from: 'Test Account 8',
+        from: username,
         message: message
       }
     };

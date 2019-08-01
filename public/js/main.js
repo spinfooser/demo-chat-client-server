@@ -11,7 +11,8 @@ function main() {
 function inputWiring(view) {
   let postMessageButton = document.getElementById('send-button')
   let inputBox = document.getElementById('message')
-  postMessageButton.addEventListener('click', () => view.sendMessage(inputBox.value))
+  let usernameBox = document.getElementById('user')
+  postMessageButton.addEventListener('click', () => view.sendMessage(usernameBox.value, inputBox.value))
 }
 
 main()
