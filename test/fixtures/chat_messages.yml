@@ -1,5 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 basic_test:
+  id: 0
   message: Hello! How are you today?
+  from: The Friendly Barber
+
+odd_message:
+  id: 1
+  message: I'm not sure what kind of haircut you want
+  from: The Friendly Barber
+
+odd_message:
+  id: 2
+  message: Ok, bowlcut it is...
   from: The Friendly Barber
