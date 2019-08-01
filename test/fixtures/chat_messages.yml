@@ -5,7 +5,7 @@ basic_test:
   message: Hello! How are you today?
   from: The Friendly Barber
 
-odd_message:
+the_question:
   id: 1
   message: I'm not sure what kind of haircut you want
   from: The Friendly Barber
